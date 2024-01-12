@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="deneme.css">
+<style>
+body{
+    background-color: rgb(155, 105, 0);
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(975, 184, 1917);
+
+}
+
+
+section{
+    width:%60;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    padding: 40px;
+    width: 60%;
+    
+
+}
+
+img{
+    width: 20%;
+    height: 200px;
+    margin: 10px 30px 10px 10px;
+    justify-content: center;
+}
+
+</style>
+<title>Rasgele Fotoğraf Galerisi</title>
+
+
+
+<body>
+    <header>
+        <h1>Fotoğraf Galerisi</h1>
+    </header>
+    <main>
+        <section id="rasgele"></section>
+        <button id="yenile">Yenile</button>
+    
+    </main>
+
+    <script>
+      var rasgele= document.getElementById("rasgele");
+
+
+
+for ( let i = 0; i<15; i++) {
+
+    rasgele.innerHTML += `<img src="https://source.unsplash.com/random/${i + 1}" alt="photo">`;
+
+    }
+
+
+var yenile= document.getElementById("yenile")
+
+yenile.addEventListener("click", function() {
+    location.reload();
+})
+    </script>
+    
+</body>
+</head>
